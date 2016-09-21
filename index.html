@@ -10,7 +10,7 @@
 		.primary-header{
 			background-color: #444;
 			height:50px;
-		}
+		} 		
 		.primary-header .inner{
 			background-color: #777;
 			margin: 0 auto;
@@ -26,12 +26,12 @@
 			flex: 7;
 			display: flex;
 		}
-		@media screen and (min-width: 960px){
-			.primary-header .inner{
-				width: 960px;
-				padding-bottom:0%;
-			}	
-		}	
+				@media screen and (min-width: 960px){
+					.primary-header .inner{
+						width: 960px;
+						padding-bottom:0%;
+					}	
+				}	
 		.title{
 			height:50px; /*temp*/
 			flex:2;
@@ -40,11 +40,72 @@
 			height:50px; /*temp*/
 			flex:5;
 			background-color: #555;
+			text-align: center;
 		}
 		nav .promary-nav{
 			background-color:#333;
 			height: 40px;
 		}
+/*Menu***********************************************/
+		.menu-on{
+			background-color:#000;
+			color:#fff;
+			position: fixed;
+			right: 0;
+			top: 40;
+			z-index: 1001;
+			padding: 10px;
+		}
+		.menu-off{
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0, 0.6);
+			z-index: 1000;
+			display: none;
+		}
+		nav.primary-nav{
+			background-color: #000;
+			position: fixed;
+			right: 0;
+			top: 20;
+			min-width: 200px;
+			z-index: 1002;
+			display: none;
+		}
+		nav.primary-nav a{
+			color: #fff;
+			display: block;
+			padding: 5px 10px;
+		}
+		#toggle-menu{
+			display: none;
+		}
+
+		#toggle-menu:checked ~ nav.primary-nav{
+			display:block;
+		}
+
+		#toggle-menu:checked ~ .menu-off {
+			display: block;
+		}
+
+		@media screen and (min-width: 690px) {
+			.menu-on, .menu-off {
+				display: none;
+			}
+			nav.primary-nav {
+				display: block;
+				position: static;
+			}
+
+			nav.primary-nav a {
+				display: inline-block;
+			}
+		}
+/*Menu***********************************************/
 		/********************
 				HERO
 		*********************/
@@ -199,7 +260,17 @@
 			</div>
 			<div class="headerContent">
 				<div class="title">title</div>
-				<nav class="primary-nav">nav</nav>
+
+				<input id="toggle-menu" type="checkbox" />
+				<label for="toggle-menu" class="menu-on">MENU</label>
+				<label for="toggle-menu" class="menu-off"></label>
+				
+				<nav class="primary-nav">
+					<a href="https://www.facebook.com/events/birthdays?extra_data[start_date]=2016%2F09%2F15&extra_data[notif_id]=1473955455803721&extra_data[notif_type]=birthday_reminder&notif_t=birthday_reminder&notif_id=1473955455803721">Home</a>
+					<a href="">Members</a>
+					<a href="">About Us</a>
+					<a href="">Contact Us</a>
+				</nav>
 			</div>
 		</div>
 	</header>
