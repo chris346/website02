@@ -4,29 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
+		/********************
+				HEADER
+		*********************/
 		.primary-header{
 			background-color: #444;
-			overflow: visible;
 			height:50px;
 		}
 		.primary-header .inner{
 			background-color: #777;
 			margin: 0 auto;
 			display: flex;
-			overflow: visible;
 		}
 		.primary-header .inner .headerLogo{
 			flex: 1;
-			/*background-color: #999;*/
-			overflow: visible;
 		}	
 		.primary-header .inner .headerLogo img{
 			width:100%;
 		}	
 		.primary-header .inner .headerContent{
 			flex: 7;
+			display: flex;
 		}
-
 		@media screen and (min-width: 960px){
 			.primary-header .inner{
 				width: 960px;
@@ -34,15 +33,21 @@
 			}	
 		}	
 		.title{
-			height:25px; /*temp*/
+			height:50px; /*temp*/
+			flex:2;
 		}
 		.primary-nav{
-			height:25px; /*temp*/
+			height:50px; /*temp*/
+			flex:5;
+			background-color: #555;
 		}
 		nav .promary-nav{
 			background-color:#333;
 			height: 40px;
 		}
+		/********************
+				HERO
+		*********************/
 		.hero{
 			background-color: blue;
 		}
@@ -59,7 +64,10 @@
 				height:540px;
 				padding-bottom:0%;
 			}	
-		}		
+		}	
+		/********************
+			SELECTION-BAR
+		*********************/	
 		.selection-bar{ 
 			background-color: brown;
 			height:0px;
@@ -77,6 +85,9 @@
 				padding-bottom:0%;
 			}
 		}
+		/********************
+			 SELECTION-BOX
+		*********************/
 		.selection-box{
 			flex:1;
 			margin-left: 3%;
@@ -98,6 +109,9 @@
 				
 			}
 		}
+		/********************
+				MAIN
+		*********************/
 		.main{
 			background-color: green;
 		}
@@ -114,6 +128,9 @@
 				padding-bottom:0%;
 			}	
 		}	
+		/********************
+			    EXTRA
+		*********************/
 		.extra{
 			background-color: red;
 		}
@@ -129,14 +146,13 @@
 				padding-bottom:0%;
 			}	
 		}
-		
+		/********************
+			   FOOTER
+		*********************/
 		.primary-footer{
 			background-color: #444;
-			
 		}
 		.primary-footer .inner{
-	
-			height: 50px; /*temp*/
 			background-color: #777;
 			margin: 0 auto;
 		}
@@ -146,7 +162,33 @@
 				padding-bottom:0%;
 			}	
 		}
-
+		.secondary-nav{
+			margin: 0 auto;
+			width: 500px;
+			background-color: blue;
+			text-align: center;
+			display: flex
+			border-bottom: orange solid 4px;		}
+		.iconSection{
+			margin: 0 auto;
+			max-width: 500px;
+			background-color: lime;
+			text-align: center;
+			display: flex
+		}
+		.iconContainer{
+			background-color: yellow;
+			flex: 1;
+			font-size: 11px;
+			color: #fff;
+		}
+		.contactInfo{
+			margin: 0 auto;
+			width: 500px;
+			background-color: blue;
+			text-align: center;
+			display: flex
+			}
 	</style>
 </head>
 <body>
@@ -196,7 +238,38 @@
 	</div>
 	<footer class="primary-footer">
 		<div class="inner">
-			footer
+			<div class="secondary-nav">
+				navigation
+			</div>
+			<div class="iconSection">
+				<div class="iconContainer">
+					<img src="icon-facebook.png" alt="">
+					<div class="iconTitle">
+						Facebook	
+					</div>
+				</div>	
+				<div class="iconContainer">
+					<img src="icon-youtube.png" alt="">
+					<div class="iconTitle">
+						YouTube	
+					</div>
+				</div>	
+				<div class="iconContainer">
+					<img src="icon-twitter.png" alt="">
+					<div class="iconTitle">
+						Twitter	
+					</div>
+				</div>	
+				<div class="iconContainer">
+					<img src="icon-instagram.png" alt="">
+					<div class="iconTitle">
+						Instagram	
+					</div>
+				</div>	
+			</div>
+			<div class="contactInfo">
+				contact
+			</div>
 		</div>
 	</footer>
 </body>
