@@ -4,15 +4,34 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
+		body{
+			background-color: orange;
+			font-family: helvetica ;
+		}
+		h1,h2,h3,h4,h5,h6{
+			margin: 0;
+			padding: 0;
+		}
 		/********************
 				HEADER
 		*********************/
 		.primary-header{
-			background-color: #444;
-			height:50px;
+			/*background-color: #444;*/
+			/*height:50px;*/
+			/*display: none;*/
+			position: absolute;
+			top: 2;
+    		z-index: 2000;
 		} 		
+				@media screen and (min-width: 600px){
+					.primary-header{
+						height:50px;
+						/*display: block;*/
+						position: static;
+					}	
+				}
 		.primary-header .inner{
-			background-color: #777;
+			/*background-color: #777;*/
 			margin: 0 auto;
 			display: flex;
 		}
@@ -34,25 +53,34 @@
 				}	
 		.title{
 			height:50px; /*temp*/
+			line-height: 50px;
 			flex:2;
+			color: red; /*temp*/
 		}
+				@media screen and (min-width: 600px){
+					.primary-header .inner{
+						background-color: #333;
+					}	
+				}	
 		.primary-nav{
 			height:50px; /*temp*/
+			line-height: 50px;
 			flex:5;
-			background-color: #555;
+			/*background-color: #555;*/
 			text-align: center;
+			text-decoration: none;
 		}
 		nav .promary-nav{
-			background-color:#333;
+			/*background-color:#333;*/
 			height: 40px;
 		}
-/*Menu***********************************************/
+/*MENU***********************************************/
 		.menu-on{
 			background-color:#000;
 			color:#fff;
-			position: fixed;
+			/*position: fixed;
 			right: 0;
-			top: 40;
+			top: 40;*/
 			z-index: 1001;
 			padding: 10px;
 		}
@@ -83,16 +111,13 @@
 		#toggle-menu{
 			display: none;
 		}
-
 		#toggle-menu:checked ~ nav.primary-nav{
 			display:block;
 		}
-
 		#toggle-menu:checked ~ .menu-off {
 			display: block;
 		}
-
-		@media screen and (min-width: 690px) {
+		@media screen and (min-width: 600px) {
 			.menu-on, .menu-off {
 				display: none;
 			}
@@ -100,12 +125,11 @@
 				display: block;
 				position: static;
 			}
-
 			nav.primary-nav a {
 				display: inline-block;
 			}
 		}
-/*Menu***********************************************/
+/*MENU***********************************************/
 		/********************
 				HERO
 		*********************/
@@ -225,7 +249,7 @@
 		}
 		.secondary-nav{
 			margin: 0 auto;
-			width: 500px;
+			max-width: 500px;
 			background-color: blue;
 			text-align: center;
 			display: flex
@@ -245,7 +269,7 @@
 		}
 		.contactInfo{
 			margin: 0 auto;
-			width: 500px;
+			max-width: 500px;
 			background-color: blue;
 			text-align: center;
 			display: flex
@@ -259,7 +283,7 @@
 				<img src="https://pbs.twimg.com/profile_images/1598037847/Creative-Circle-Logo.png" alt="">
 			</div>
 			<div class="headerContent">
-				<div class="title">title</div>
+				<div class="title"><h2>Abunai MMA</h2></div>
 
 				<input id="toggle-menu" type="checkbox" />
 				<label for="toggle-menu" class="menu-on">MENU</label>
