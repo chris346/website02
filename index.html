@@ -6,11 +6,27 @@
 	<style>
 		.primary-header{
 			background-color: #444;
+			overflow: visible;
+			height:50px;
 		}
 		.primary-header .inner{
 			background-color: #777;
 			margin: 0 auto;
+			display: flex;
+			overflow: visible;
 		}
+		.primary-header .inner .headerLogo{
+			flex: 1;
+			/*background-color: #999;*/
+			overflow: visible;
+		}	
+		.primary-header .inner .headerLogo img{
+			width:100%;
+		}	
+		.primary-header .inner .headerContent{
+			flex: 7;
+		}
+
 		@media screen and (min-width: 960px){
 			.primary-header .inner{
 				width: 960px;
@@ -136,8 +152,13 @@
 <body>
 	<header class="primary-header">
 		<div class="inner">
-			<div class="title">title</div>
-			<nav class="primary-nav">nav</nav>
+			<div class="headerLogo">
+				<img src="https://pbs.twimg.com/profile_images/1598037847/Creative-Circle-Logo.png" alt="">
+			</div>
+			<div class="headerContent">
+				<div class="title">title</div>
+				<nav class="primary-nav">nav</nav>
+			</div>
 		</div>
 	</header>
 	<div class="hero">
