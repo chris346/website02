@@ -128,6 +128,14 @@
 		}
 		#toggle-menu:checked ~ nav.primary-nav{
 			display:block;
+			padding: 10px;
+
+		}
+
+		#toggle-menu:checked ~ nav.primary-nav a{
+			margin-bottom: 50px;
+			color: white;
+			border: white solid 1px;
 		}
 		#toggle-menu:checked ~ .menu-off {
 			display: block;
@@ -161,14 +169,12 @@
   			text-align: center;
 		}
 		aside.messageBoard{
-  			background-color: orange;
   			position: fixed;
   			right: 0;
   			top: 0;
   			left: 0;
   			bottom: 0;
-  			margin: 0px 100px 50px 0px;
-  			/*min-width: 200px;*/
+  			margin: 0px 100px 50px 0px;s
   			z-index: 1002;
   			display: none;
   	  		}
@@ -189,7 +195,6 @@
   		#toggle-messageBoard:checked ~ aside.messageBoard {
   			display: block;
   			height: 100%;
-  			margin: 20px;
   			overflow: scroll;
   			z-index: 2005;
   		}
@@ -243,7 +248,7 @@
 			/*background-color: lightblue;*/ /*temp*/
 			margin: 0 auto;
 			/*padding-bottom:48%;*/ /*uncomment this if .messageBoard and .heroContent is not included*/
-			background: url("stock-photo-rising-sun-japan-flag-123561421.jpg");
+			background: url("risingSun.jpg");
 			background-size: 100% 100%;
 			display: flex;
 		}	
@@ -256,7 +261,8 @@
 			}	
 		}	
 		.hero .inner .messageBoard{
-			background-color: rgba(0,255,0,1);
+			background-color: rgba(0,0,0,.8);
+			color: #fff;
 			flex: 5;
 			padding-bottom:55%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
 			height:0;
@@ -265,7 +271,7 @@
 		}
 		@media screen and (min-width: 960px){
 			.hero .inner .messageBoard{
-				background-color: rgba(0,255,0,1);
+				background-color: rgba(0,0,0,.8);
 				flex: 5;
 				padding-bottom:48%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
 				overflow: scroll;
