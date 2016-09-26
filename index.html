@@ -6,7 +6,7 @@
 	<style>
 /*BODY*************************************************/
 		body{
-			background-color: orange;
+			background-color: black;
 			font-family: helvetica ;
 		}
 		h1,h2,h3,h4,h5,h6{
@@ -174,7 +174,7 @@
   			top: 0;
   			left: 0;
   			bottom: 0;
-  			margin: 0px 100px 50px 0px;s
+  			margin: 0px 100px 50px 0px;
   			z-index: 1002;
   			display: none;
   	  		}
@@ -229,6 +229,7 @@
 		}
 		.messages{
 			margin-top: 40px;
+			font-size: em;
 		}
 		.messageBoardTitle{
 			margin-top:15px;
@@ -248,7 +249,7 @@
 			/*background-color: lightblue;*/ /*temp*/
 			margin: 0 auto;
 			/*padding-bottom:48%;*/ /*uncomment this if .messageBoard and .heroContent is not included*/
-			background: url("risingSun.jpg");
+			background: url("risingSunHD.jpg");
 			background-size: 100% 100%;
 			display: flex;
 		}	
@@ -261,7 +262,7 @@
 			}	
 		}	
 		.hero .inner .messageBoard{
-			background-color: rgba(0,0,0,.8);
+			background-color: rgba(0,0,0,0);
 			color: #fff;
 			flex: 5;
 			padding-bottom:55%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
@@ -271,7 +272,7 @@
 		}
 		@media screen and (min-width: 960px){
 			.hero .inner .messageBoard{
-				background-color: rgba(0,0,0,.8);
+				background-color: rgba(0,0,0,0);
 				flex: 5;
 				padding-bottom:48%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
 				overflow: scroll;
@@ -312,7 +313,7 @@
 			margin-left: 3%;
 			margin-right: 3%;
 			/*height: 157.5px;*/ /*flex*/
-			transform: translate(0px, -78.6px);
+			transform: translate(0px, -118.6px);
 			/*background-color: ivory;*/
 			height: 157.5px;
     		line-height: 280px;
@@ -324,6 +325,14 @@
 			height: auto;
 			margin-bottom:100%;
 			vertical-align: middle;
+		}
+		#circleGradient img{
+			position: absolute;
+    		top: 0px;
+   			z-index: 1;
+   			width:100%;
+   			height:auto;
+   			background: radial-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.4), black);
 		}
 		@media screen and (min-width: 600px) {
 			.selection-box{
@@ -421,7 +430,8 @@
 	<header class="primary-header">
 		<div class="inner">
 			<div class="headerLogo">
-				<img src="https://pbs.twimg.com/profile_images/1598037847/Creative-Circle-Logo.png" alt="">
+				<!-- <img src="https://pbs.twimg.com/profile_images/1598037847/Creative-Circle-Logo.png" alt=""> -->
+				<img src="logo.png" alt="">
 			</div>
 			<div class="headerContent">
 				<div class="title"><h2>Abunai MMA</h2></div>
@@ -483,9 +493,9 @@
 	</div>	
 	<div class="selection-bar">
 		<div class="inner">
-			<div class="selection-box"><img src="http://www.qdtricks.org/wp-content/uploads/2015/12/2016-pc-wallpaper.jpg" alt=""></div>
-			<div class="selection-box"><img src="http://www.qdtricks.org/wp-content/uploads/2015/12/2016-pc-wallpaper.jpg" alt=""></div>
-			<div class="selection-box"><img src="http://www.qdtricks.org/wp-content/uploads/2015/12/2016-pc-wallpaper.jpg" alt=""></div>
+			<div class="selection-box"><img src="mmaGirl01.jpg" alt=""></div>
+			<div class="selection-box"><img src="sparring01.jpg" alt=""></div>
+			<div class="selection-box"><img src="compete01.jpg" alt=""></div>
 		</div>
 	</div>
 	<div class="main">
