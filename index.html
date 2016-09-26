@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
+/*BODY*************************************************/
 		body{
 			background-color: orange;
 			font-family: helvetica ;
@@ -15,9 +16,9 @@
 		a:-webkit-any-link {
     		text-decoration: none;
 		}
-		/********************
-				HEADER
-		*********************/
+/**************************************************BODY/
+
+/*HEADER***********************************************/
 		.primary-header{
 			/*background-color: #444;*/
 			/*height:50px;*/
@@ -78,17 +79,25 @@
 					line-height: 50px;
 				}	
 			}	
+/************************************************HEADER/
 
-/*MENU***********************************************/
+/*Menu*************************************************/
 		.menu-on{
-			background-color:#000;
+			background-color:#ff0000;
 			color:#999;
+			border: white solid 2px;
+			opacity: .6;
 			position: fixed;
 			right: 0;
 			top: 40;
 			z-index: 1001;
-			padding: 40px 10px 40px 10px;
+			padding: 10px 0px 10px 0px;
 			width: 100px;
+			text-align: center;
+		}
+		.icon{
+			height: 40px;
+			width: 40px;
 		}
 		.menu-off{
 			position: fixed;
@@ -135,17 +144,21 @@
 				display: inline-block;
 			}
 		}
-/*MENU***********************************************/
-/*message***********************************************/
+/**************************************************Menu/
+
+/*Message**********************************************/
 		.message-on {
-			background-color:#191970;
+			background-color:#ff0000;
+			opacity: .6;
 			color: #fff;
+			border: white solid 2px;
 			position: fixed;
   			right: 0;
   			top:40;
   			z-index: 1001;
-  			padding: 80px 10px 80px 10px;
+  			padding: 80px 0px 10px 0px;
   			width: 100px;
+  			text-align: center;
 		}
 		aside.messageBoard{
   			background-color: orange;
@@ -210,24 +223,26 @@
 			}
 		}
 		.messages{
-
+			margin-top: 40px;
 		}
 		.messageBoardTitle{
 			margin-top:15px;
 			text-align: center;
 			position: relative;
 		}
-/*message***********************************************/
-		/********************
-				HERO
-		*********************/
+		.messageContainer{
+			margin-top: 10px;
+		}
+/***********************************************Message/
+
+/*HERO*************************************************/
 		.hero{
 			background-color: black;
 		}
 		.hero .inner{
 			/*background-color: lightblue;*/ /*temp*/
 			margin: 0 auto;
-			/*padding-bottom:48%;*/
+			/*padding-bottom:48%;*/ /*uncomment this if .messageBoard and .heroContent is not included*/
 			background: url("stock-photo-rising-sun-japan-flag-123561421.jpg");
 			background-size: 100% 100%;
 			display: flex;
@@ -262,9 +277,9 @@
 			padding-bottom:48%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
 			margin-top: 8%;
 		}
-		/********************
-			SELECTION-BAR
-		*********************/	
+/**************************************************HERO/
+
+/*SELECTION-BAR****************************************/	
 		.selection-bar{ 
 			background-color: brown;
 			height:0px;
@@ -282,6 +297,7 @@
 				padding-bottom:0%;
 			}
 		}
+
 		/********************
 			 SELECTION-BOX
 		*********************/
@@ -308,9 +324,10 @@
 				
 			}
 		}
-		/********************
-				MAIN
-		*********************/
+/*****************************************SELECTION-BAR/	
+
+/*MAIN*************************************************/	
+
 		.main{
 			background-color: green;
 		}
@@ -328,9 +345,10 @@
 				padding-bottom:0%;
 			}	
 		}	
-		/********************
-			    EXTRA
-		*********************/
+/*************************************************MAIN*/	
+
+/*EXTRA************************************************/	
+
 		.extra{
 			background-color: red;
 		}
@@ -346,9 +364,9 @@
 				padding-bottom:0%;
 			}	
 		}
-		/********************
-			   FOOTER
-		*********************/
+/*************************************************EXTRA/	
+
+/*FOOTER************************************************/	
 		.primary-footer{
 			background-color: #444;
 		}
@@ -389,6 +407,8 @@
 			text-align: center;
 			display: flex
 			}
+/*************************************************FOOTER/	
+
 	</style>
 </head>
 <body>
@@ -401,7 +421,7 @@
 				<div class="title"><h2>Abunai MMA</h2></div>
 
 				<input id="toggle-menu" type="checkbox" />
-				<label for="toggle-menu" class="menu-on">MENU</label>
+				<label for="toggle-menu" class="menu-on"><img class="icon" src="menuIcon.png" alt=""></label>
 				<label for="toggle-menu" class="menu-off"></label>
 				
 				<nav class="primary-nav">
@@ -417,31 +437,42 @@
 		<div class="inner">
 			
 			<input id="toggle-messageBoard" type="checkbox" />
-			<label for="toggle-messageBoard" class="message-on">MESS</label>
+			<label for="toggle-messageBoard" class="message-on"><img class="icon" src="messageIcon.png" alt=""></label>
 			<label for="toggle-messageBoard" class="message-off"></label>
 			
 			<aside class="messageBoard">
 				<div class="messages">
-				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ip -->sum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ip -->sum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ip -->sum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ip -->sum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ip -->sum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ip -->sum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ip -->sum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				Chris says: Lorem ip -->sum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
+					
+					<div class="messageContainer">
+						Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.<br>
+					</div>					
+					<div class="messageContainer">
+						Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.<br>
+					</div>					
+					<div class="messageContainer">
+						Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.<br>
+					</div>					
+					<div class="messageContainer">
+						Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.<br>
+					</div>					
+					<div class="messageContainer">
+						Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.<br>
+					</div>					
+					<div class="messageContainer">
+						Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.<br>
+					</div>					
+					<div class="messageContainer">
+						Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.<br>
+					</div>
+					<div class="messageContainer">
+						Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.<br>
+					</div>
 				</div>
 			</aside>
 			<div class="heroContent">
 				content
 			</div>
-
-
+		
 		</div>
 	</div>	
 	<div class="selection-bar">
