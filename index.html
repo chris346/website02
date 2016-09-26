@@ -40,6 +40,7 @@
 		}
 		.primary-header .inner .headerLogo{
 			flex: 1;
+			z-index: 1004;
 		}	
 		.primary-header .inner .headerLogo img{
 			width:100%;
@@ -208,6 +209,11 @@
 		.messages{
 
 		}
+		.messageBoardTitle{
+			margin-top:15px;
+			text-align: center;
+			position: relative;
+		}
 /*message***********************************************/
 		/********************
 				HERO
@@ -244,7 +250,6 @@
 				background-color: rgba(0,255,0,1);
 				flex: 5;
 				padding-bottom:48%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
-				/*margin: 8% 2% 0 2%;*/
 				overflow: scroll;
 			}
 		}
@@ -413,15 +418,14 @@
 			<label for="toggle-messageBoard" class="message-off"></label>
 			
 			<aside class="messageBoard">
-				<span class="messages">
-				<!-- Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
+				<div class="messages">
 				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
 				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
 				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
 				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
 				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
 				Chris says: Lorem ip -->sum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
-				</span>
+				</div>
 			</aside>
 			<div class="heroContent">
 				content
