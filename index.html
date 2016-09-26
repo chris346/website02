@@ -4,62 +4,172 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
-		.primary-header{
-			background-color: #444;
-			overflow: visible;
-			height:50px;
+		body{
+			background-color: orange;
+			font-family: helvetica ;
 		}
+		h1,h2,h3,h4,h5,h6{
+			margin: 0;
+			padding: 0;
+		}
+		a:-webkit-any-link {
+    		text-decoration: none;
+		}
+		/********************
+				HEADER
+		*********************/
+		.primary-header{
+			/*background-color: #444;*/
+			/*height:50px;*/
+			/*display: none;*/
+			position: absolute;
+			top: 2;
+    		z-index: 2000;
+		} 		
+				@media screen and (min-width: 600px){
+					.primary-header{
+						height:50px;
+						/*display: block;*/
+						position: static;
+					}	
+				}
 		.primary-header .inner{
-			background-color: #777;
+			/*background-color: #777;*/
 			margin: 0 auto;
 			display: flex;
-			overflow: visible;
 		}
 		.primary-header .inner .headerLogo{
 			flex: 1;
-			/*background-color: #999;*/
-			overflow: visible;
 		}	
 		.primary-header .inner .headerLogo img{
 			width:100%;
 		}	
 		.primary-header .inner .headerContent{
 			flex: 7;
+			display: flex;
 		}
-
-		@media screen and (min-width: 960px){
-			.primary-header .inner{
-				width: 960px;
-				padding-bottom:0%;
-			}	
-		}	
+				@media screen and (min-width: 960px){
+					.primary-header .inner{
+						width: 960px;
+						padding-bottom:0%;
+					}	
+				}	
 		.title{
-			height:25px; /*temp*/
+			height:50px; /*temp*/
+			line-height: 50px;
+			flex:2;
+			color: red; /*temp*/
 		}
-		.primary-nav{
-			height:25px; /*temp*/
+				@media screen and (min-width: 600px){
+					.primary-header .inner{
+						background-color: #333;
+					}	
+				}	
+		.primary-nav{			
+			flex:5;
+			/*background-color: #555;*/
+			text-align: center;
+			text-decoration: none;
 		}
-		nav .promary-nav{
-			background-color:#333;
-			height: 40px;
+		@media screen and (min-width: 600px){
+				.primary-header .inner{
+					height: 50px;
+					line-height: 50px;
+				}	
+			}	
+/*MENU***********************************************/
+		.menu-on{
+			background-color:#000;
+			color:#fff;
+			/*position: fixed;
+			right: 0;
+			top: 40;*/
+			z-index: 1001;
+			padding: 10px;
 		}
+		.menu-off{
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0, 0.6);
+			z-index: 1000;
+			display: none;
+		}
+		nav.primary-nav{
+			background-color: #000;
+			position: fixed;
+			right: 0;
+			top: 20;
+			min-width: 200px;
+			z-index: 1002;
+			display: none;
+		}
+		nav.primary-nav a{
+			color: #fff;
+			display: block;
+			padding: 5px 10px;
+		}
+		#toggle-menu{
+			display: none;
+		}
+		#toggle-menu:checked ~ nav.primary-nav{
+			display:block;
+		}
+		#toggle-menu:checked ~ .menu-off {
+			display: block;
+		}
+		@media screen and (min-width: 600px) {
+			.menu-on, .menu-off {
+				display: none;
+			}
+			nav.primary-nav {
+				display: block;
+				position: static;
+			}
+			nav.primary-nav a {
+				display: inline-block;
+			}
+		}
+/*MENU***********************************************/
+		/********************
+				HERO
+		*********************/
 		.hero{
-			background-color: blue;
+			background-color: black;
 		}
 		.hero .inner{
-			background-color: lightblue; /*temp*/
+			/*background-color: lightblue;*/ /*temp*/
 			margin: 0 auto;
-			padding-bottom:55%;
-			background: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/05/amazing_fantasy_sci_fi_planet_wallpaper_hd_9.jpg");
+			/*padding-bottom:48%;*/
+			background: url("stock-photo-rising-sun-japan-flag-123561421.jpg");
 			background-size: 100% 100%;
+			display: flex;
 		}	
 		@media screen and (min-width: 960px){
 			.hero .inner{
 				width: 960px;
 				height:540px;
 				padding-bottom:0%;
+				display: flex;
 			}	
-		}		
+		}	
+		.hero .inner .messageBoard-wrapper{
+			background-color: rgba(0,255,0, .6);
+			flex: 5;
+			padding-bottom:48%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
+			margin: 8% 2% 0 2%;
+		}
+		.hero .inner .heroContent{
+			background-color: rgba(255,0,0, .6);
+			flex: 7;
+			padding-bottom:48%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
+			margin-top: 8%;
+		}
+		/********************
+			SELECTION-BAR
+		*********************/	
 		.selection-bar{ 
 			background-color: brown;
 			height:0px;
@@ -77,6 +187,9 @@
 				padding-bottom:0%;
 			}
 		}
+		/********************
+			 SELECTION-BOX
+		*********************/
 		.selection-box{
 			flex:1;
 			margin-left: 3%;
@@ -98,6 +211,9 @@
 				
 			}
 		}
+		/********************
+				MAIN
+		*********************/
 		.main{
 			background-color: green;
 		}
@@ -106,6 +222,7 @@
 			margin: 0 auto;
 			padding-bottom:55%;
 			padding-top: 12%;
+			font-size: 1.3em;
 		}	
 		@media screen and (min-width: 960px){
 			.main .inner{
@@ -114,6 +231,9 @@
 				padding-bottom:0%;
 			}	
 		}	
+		/********************
+			    EXTRA
+		*********************/
 		.extra{
 			background-color: red;
 		}
@@ -129,14 +249,13 @@
 				padding-bottom:0%;
 			}	
 		}
-		
+		/********************
+			   FOOTER
+		*********************/
 		.primary-footer{
 			background-color: #444;
-			
 		}
 		.primary-footer .inner{
-	
-			height: 50px; /*temp*/
 			background-color: #777;
 			margin: 0 auto;
 		}
@@ -146,7 +265,33 @@
 				padding-bottom:0%;
 			}	
 		}
-
+		.secondary-nav{
+			margin: 0 auto;
+			max-width: 500px;
+			background-color: blue;
+			text-align: center;
+			display: flex
+			border-bottom: orange solid 4px;		}
+		.iconSection{
+			margin: 0 auto;
+			max-width: 500px;
+			background-color: lime;
+			text-align: center;
+			display: flex
+		}
+		.iconContainer{
+			background-color: yellow;
+			flex: 1;
+			font-size: 11px;
+			color: #fff;
+		}
+		.contactInfo{
+			margin: 0 auto;
+			max-width: 500px;
+			background-color: blue;
+			text-align: center;
+			display: flex
+			}
 	</style>
 </head>
 <body>
@@ -156,13 +301,33 @@
 				<img src="https://pbs.twimg.com/profile_images/1598037847/Creative-Circle-Logo.png" alt="">
 			</div>
 			<div class="headerContent">
-				<div class="title">title</div>
-				<nav class="primary-nav">nav</nav>
+				<div class="title"><h2>Abunai MMA</h2></div>
+
+				<input id="toggle-menu" type="checkbox" />
+				<label for="toggle-menu" class="menu-on">MENU</label>
+				<label for="toggle-menu" class="menu-off"></label>
+				
+				<nav class="primary-nav">
+					<a href="https://www.facebook.com/events/birthdays?extra_data[start_date]=2016%2F09%2F15&extra_data[notif_id]=1473955455803721&extra_data[notif_type]=birthday_reminder&notif_t=birthday_reminder&notif_id=1473955455803721">Home</a>
+					<a href="">Members</a>
+					<a href="">About Us</a>
+					<a href="">Contact Us</a>
+				</nav>
 			</div>
 		</div>
 	</header>
 	<div class="hero">
-		<div class="inner">section1</div>
+		<div class="inner">
+
+			<div class="messageBoard-wrapper">
+				maessage
+			</div>
+			<div class="heroContent">
+				content
+			</div>
+
+
+		</div>
 	</div>	
 	<div class="selection-bar">
 		<div class="inner">
@@ -196,7 +361,38 @@
 	</div>
 	<footer class="primary-footer">
 		<div class="inner">
-			footer
+			<div class="secondary-nav">
+				navigation
+			</div>
+			<div class="iconSection">
+				<div class="iconContainer">
+					<img src="icon-facebook.png" alt="">
+					<div class="iconTitle">
+						Facebook	
+					</div>
+				</div>	
+				<div class="iconContainer">
+					<img src="icon-youtube.png" alt="">
+					<div class="iconTitle">
+						YouTube	
+					</div>
+				</div>	
+				<div class="iconContainer">
+					<img src="icon-twitter.png" alt="">
+					<div class="iconTitle">
+						Twitter	
+					</div>
+				</div>	
+				<div class="iconContainer">
+					<img src="icon-instagram.png" alt="">
+					<div class="iconTitle">
+						Instagram	
+					</div>
+				</div>	
+			</div>
+			<div class="contactInfo">
+				contact
+			</div>
 		</div>
 	</footer>
 </body>
