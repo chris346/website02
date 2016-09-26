@@ -77,15 +77,17 @@
 					line-height: 50px;
 				}	
 			}	
+
 /*MENU***********************************************/
 		.menu-on{
 			background-color:#000;
-			color:#fff;
-			/*position: fixed;
+			color:#999;
+			position: fixed;
 			right: 0;
-			top: 40;*/
+			top: 40;
 			z-index: 1001;
-			padding: 10px;
+			padding: 40px 10px 40px 10px;
+			width: 100px;
 		}
 		.menu-off{
 			position: fixed;
@@ -133,6 +135,80 @@
 			}
 		}
 /*MENU***********************************************/
+/*message***********************************************/
+		.message-on {
+			background-color:#191970;
+			color: #fff;
+			position: fixed;
+  			right: 0;
+  			top:40;
+  			z-index: 1001;
+  			padding: 80px 10px 80px 10px;
+  			width: 100px;
+		}
+		aside.messageBoard{
+  			background-color: orange;
+  			position: fixed;
+  			right: 0;
+  			top: 0;
+  			left: 0;
+  			bottom: 0;
+  			margin: 0px 100px 50px 0px;
+  			/*min-width: 200px;*/
+  			z-index: 1002;
+  			display: none;
+  		}
+  		@media screen and (min-width: 600px){
+			aside.messageBoard {
+				width:300px;
+				margin: 31px 100px 50px 0px;
+			}
+		}
+
+		aside.messageBoard.message {
+			background-color: #7B68EE;
+			margin: 5px;
+			padding: 5px 10px;
+		}
+
+
+  		#toggle-messageBoard:checked ~ aside.messageBoard {
+  			display: block;
+  		}
+		#toggle-messageBoard{
+  			display: none;
+  		}
+		.message-off { 
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0, 0.6);
+			z-index: 1000;
+			display: none;
+		}
+		#toggle-messageBoard:checked ~ .message-off {
+			display: block;
+			z-index: 1004;
+		}
+		@media screen and (min-width: 600px){
+			.message-on, .message-off { 
+				display: none;
+			}
+			aside.messageBoard {
+				display: block;
+				position: static;
+				padding-bottom: 34%;
+			}
+			aside.messageBoard.message {
+				display: inline-block;
+			}
+		}
+		.messages{
+
+		}
+/*message***********************************************/
 		/********************
 				HERO
 		*********************/
@@ -155,14 +231,25 @@
 				display: flex;
 			}	
 		}	
-		.hero .inner .messageBoard-wrapper{
-			background-color: rgba(0,255,0, .6);
+		.hero .inner .messageBoard{
+			background-color: rgba(0,255,0,1);
 			flex: 5;
-			padding-bottom:48%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
-			margin: 8% 2% 0 2%;
+			padding-bottom:55%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
+			height:0;
+			margin: 0px;
+			overflow: scroll;
+		}
+		@media screen and (min-width: 960px){
+			.hero .inner .messageBoard{
+				background-color: rgba(0,255,0,1);
+				flex: 5;
+				padding-bottom:48%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
+				/*margin: 8% 2% 0 2%;*/
+				overflow: scroll;
+			}
 		}
 		.hero .inner .heroContent{
-			background-color: rgba(255,0,0, .6);
+			/*background-color: rgba(255,0,0, .6);*/
 			flex: 7;
 			padding-bottom:48%; /*this must be placed in container if .messageBoard-wrapper or .heroContent is not used*/
 			margin-top: 8%;
@@ -199,7 +286,9 @@
 			/*background-color: ivory;*/
 			height: 157.5px;
     		line-height: 280px;
+    		z-index: 1003;
 		}
+
 		.selection-box img{
 			width: 100%;
 			height: auto;
@@ -318,10 +407,22 @@
 	</header>
 	<div class="hero">
 		<div class="inner">
-
-			<div class="messageBoard-wrapper">
-				maessage
-			</div>
+			
+			<input id="toggle-messageBoard" type="checkbox" />
+			<label for="toggle-messageBoard" class="message-on">MESS</label>
+			<label for="toggle-messageBoard" class="message-off"></label>
+			
+			<aside class="messageBoard">
+				<span class="messages">
+				<!-- Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
+				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
+				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
+				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
+				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
+				Chris says: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
+				Chris says: Lorem ip -->sum dolor sit amet, consectetur adipisicing elit. Officiis saepe, molestias natus dolore, qui excepturi magnam nobis quis ipsa sint distinctio doloremque? Alias dolore fugiat assumenda consequuntur quis exercitationem mollitia.
+				</span>
+			</aside>
 			<div class="heroContent">
 				content
 			</div>
