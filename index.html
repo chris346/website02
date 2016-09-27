@@ -20,9 +20,6 @@
 
 /*HEADER***********************************************/
 		.primary-header{
-			/*background-color: #444;*/
-			/*height:50px;*/
-			/*display: none;*/
 			position: absolute;
 			top: 2;
     		z-index: 2000;
@@ -228,8 +225,10 @@
 			}
 		}
 		.messages{
-			margin-top: 40px;
-			font-size: em;
+			margin-top: 80px;
+			margin-left: 20px;
+			margin-right: 20px;
+			font-size:  1em;
 		}
 		.messageBoardTitle{
 			margin-top:15px;
@@ -246,7 +245,6 @@
 			background-color: black;
 		}
 		.hero .inner{
-			/*background-color: lightblue;*/ /*temp*/
 			margin: 0 auto;
 			/*padding-bottom:48%;*/ /*uncomment this if .messageBoard and .heroContent is not included*/
 			background: url("risingSunHD.jpg");
@@ -286,24 +284,26 @@
 		}
 		.figure{
 			position: absolute;
-			right: 100;
-			top: 70;
 			width: 62%;
-			max-width: 765px;
-			margin-left: 7%;s
+			max-width: 680px;
+			margin-left: 8%;
+		}
+		@media screen and (min-width: 600px){
+			.figure{
+				margin-left: 7%;
+			}
 		}
 /**************************************************HERO/
 
 /*SELECTION-BAR****************************************/	
 		.selection-bar{ 
 			background-color: brown;
-			height:0px;
+			height:0;
 			overflow: visible;
 		}	
 		.selection-bar .inner{
 			margin: 0 auto;
 			display: flex;
-			background-color: yellow;
 			padding-bottom:55%;
 		}
 		@media screen and (min-width: 960px) {
@@ -353,21 +353,38 @@
 
 		.main{
 			background-color: green;
+			background: url("collageMod.jpg");
+			background-size: 100% auto;
+			color: white;
+		}
+		.linearGradient{
+			/*position: absolute;*/
+    		top: 0px;
+   			z-index: 1;
+   			width:100%;
+   			height:auto;
+   			background: linear-gradient(#000, rgba(0,0,0,0.0), #000);
 		}
 		.main .inner{
-			background-color: lightgreen;
 			margin: 0 auto;
 			padding-bottom:55%;
-			padding-top: 12%;
 			font-size: 1.3em;
 		}	
 		@media screen and (min-width: 960px){
 			.main .inner{
 				width: 960px; /*temp*/
-				height:540px;
 				padding-bottom:0%;
 			}	
 		}	
+		.mainContent{
+			background-color: rgba(0,0,0,.7);
+			overflow: scroll;
+			height: 540px;
+			margin-top: 10%;
+		}
+		.mainContent p{
+			padding-bottom: 200%;
+		}
 /*************************************************MAIN*/	
 
 /*EXTRA************************************************/	
@@ -391,11 +408,14 @@
 
 /*FOOTER************************************************/	
 		.primary-footer{
-			background-color: #444;
+			background-color: #000;
 		}
 		.primary-footer .inner{
-			background-color: #777;
+			background-color: #111;
+			background-size: 100% auto;
 			margin: 0 auto;
+			/*border-style: solid;*/
+
 		}
 		@media screen and (min-width: 960px){
 			.primary-footer .inner{
@@ -403,33 +423,82 @@
 				padding-bottom:0%;
 			}	
 		}
-		.secondary-nav{
-			margin: 0 auto;
-			max-width: 500px;
-			background-color: blue;
+		.primary-footer .footer-nav{
+			margin-bottom: 5px;
+			color: red;
+			height: 30px;
 			text-align: center;
-			display: flex
-			border-bottom: orange solid 4px;		}
+		}
+		.primary-footer .footer-nav a{
+			font-size: .7em;
+			font-weight: 100;
+			margin: 20px;
+			line-height: 30px;
+			color: #ff0000	;
+		}
 		.iconSection{
 			margin: 0 auto;
 			max-width: 500px;
-			background-color: lime;
+			/*background-color: lime;*/
 			text-align: center;
 			display: flex
 		}
 		.iconContainer{
-			background-color: yellow;
+			/*background-color: yellow;*/
 			flex: 1;
 			font-size: 11px;
 			color: #fff;
 		}
-		.contactInfo{
-			margin: 0 auto;
-			max-width: 500px;
-			background-color: blue;
+		.footerContent{
+			display: block;
+			border-top: #ff0000 solid 2px;
+			border-bottom: #ff0000 solid 2px;
+
+		}
+		@media screen and (min-width: 600px){
+			.footerContent{
+				display: flex;
+			}	
+		}
+		.footerContent h5{
+			color: #fff;
 			text-align: center;
-			display: flex
-			}
+			padding-bottom: 10px;
+			font-weight: 200;
+		}
+		.contact{
+
+		}
+		.contact .form{
+	
+		}
+		.media{
+			margin-top: 50px;
+		}
+		.footerInfo{
+			flex: 1;
+			margin: 30px;
+		}
+
+		.footerContent h5{
+			color: #fff;
+			text-align: center;
+			padding-bottom: 10px;
+			font-weight: 200;
+		}
+		.map{
+			flex: 1;
+			margin: 20px;
+		}
+		.copyright{
+		}
+		.address{
+			font-size: .8em;
+		}
+		textarea{
+			margin-top: 4px;
+		}
+
 /*************************************************FOOTER/	
 
 	</style>
@@ -449,7 +518,7 @@
 				<label for="toggle-menu" class="menu-off"></label>
 				
 				<nav class="primary-nav">
-					<a href="https://www.facebook.com/events/birthdays?extra_data[start_date]=2016%2F09%2F15&extra_data[notif_id]=1473955455803721&extra_data[notif_type]=birthday_reminder&notif_t=birthday_reminder&notif_id=1473955455803721">Home</a>
+					<a href="">Home</a>
 					<a href="">Members</a>
 					<a href="">About Us</a>
 					<a href="">Contact Us</a>
@@ -507,63 +576,91 @@
 		</div>
 	</div>
 	<div class="main">
+		<div class="linearGradient">
+		
 		<div class="inner">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+			<div class="mainContent">
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elDit. Nam accusamus, velit quia magnam aut labore provident numquam pariatur! Quam, eligendi voluptate quos perferendis sit accusamus hic molestiae temporibus! Repudiandae, ducimus.
+				</p>
+			
+			</div>
+			
+		</div>	
 		</div>
-	</div>	
-	<div class="extra">
+<!-- 	<div class="extra">
 		<div class="inner">section3</div>
-	</div>
+	</div> -->
 	<footer class="primary-footer">
 		<div class="inner">
-			<div class="secondary-nav">
-				navigation
+			<div class="footerContent">
+				<div class="footerInfo">
+					<div class="contact">
+						<form>
+							<h5>CONTACT US</h5>
+						 	<input type="text" name="firstname" placeholder="Name">
+						 	<input type="text" name="lastname" placeholder="Email"><br>
+						 	<textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Questions, Comments or Concerns"></textarea>
+						</form>
+						<button type="submit" form="form1" value="Submit">Submit</button>
+					</div>
+					<div class="media">
+						<h5>FOLLOW US</h5>
+						<div class="iconSection">
+							<div class="iconContainer">
+								<img src="icon-facebook.png" alt="">
+								<div class="iconTitle">
+									Facebook	
+								</div>
+							</div>	
+							<div class="iconContainer">
+								<img src="icon-youtube.png" alt="">
+								<div class="iconTitle">
+									YouTube	
+								</div>
+							</div>	
+							<div class="iconContainer">
+								<img src="icon-twitter.png" alt="">
+								<div class="iconTitle">
+									Twitter	
+								</div>
+							</div>	
+							<div class="iconContainer">
+								<img src="icon-instagram.png" alt="">
+								<div class="iconTitle">
+									Instagram	
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="map">
+					<p class="address">1060 N Eliseo Felix Jr Way Avondale, AZ 85323</p>
+					<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:300px;width:auto;'><div id='gmap_canvas' style='height:300px;width:auto'></div><div><small><a href="http://www.embedgooglemaps.com/en/">Generate your map here, quick and easy!									Give your customers directions									Get found</a></small></div><div><small><a href="https://top10geeks.com/top-10-best-basketball-shoes-2016/">Top 10 basketball shoes</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(33.4437395,-112.33733480000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(33.4437395,-112.33733480000001)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>1060 N Eliseo Felix Jr Way<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+				</div>
 			</div>
-			<div class="iconSection">
-				<div class="iconContainer">
-					<img src="icon-facebook.png" alt="">
-					<div class="iconTitle">
-						Facebook	
-					</div>
-				</div>	
-				<div class="iconContainer">
-					<img src="icon-youtube.png" alt="">
-					<div class="iconTitle">
-						YouTube	
-					</div>
-				</div>	
-				<div class="iconContainer">
-					<img src="icon-twitter.png" alt="">
-					<div class="iconTitle">
-						Twitter	
-					</div>
-				</div>	
-				<div class="iconContainer">
-					<img src="icon-instagram.png" alt="">
-					<div class="iconTitle">
-						Instagram	
-					</div>
-				</div>	
-			</div>
-			<div class="contactInfo">
-				contact
-			</div>
+			
+		</div>
+		<div class="inner">
+			<p>© Copyright 2016, Abunai MMA</p>
 		</div>
 	</footer>
+
+
 </body>
 </html>
