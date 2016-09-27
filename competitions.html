@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+/*BODY*************************************************/
+		body{
+			background-color: #000;
+			font-family: helvetica ;
+		}
+		h1,h2,h3,h4,h5,h6{
+			margin: 0;
+			padding: 0;
+		}
+		a:-webkit-any-link {
+    		text-decoration: none;
+		}
+/**************************************************BODY/
+
+/*HEADER***********************************************/
+		.primary-header{
+			position: absolute;
+			top: 2;
+    		z-index: 2000;
+		} 		
+				@media screen and (min-width: 600px){
+					.primary-header{
+						height:50px;
+						position: static;
+					}	
+				}
+		.primary-header .inner{
+			margin: 0 auto;
+			display: flex;
+		}
+		.primary-header .inner .headerLogo{
+			flex: 1;
+			z-index: 1004;
+		}	
+		.primary-header .inner .headerLogo img{
+			width:100%;
+		}	
+		.primary-header .inner .headerContent{
+			flex: 7;
+			display: flex;
+		}
+				@media screen and (min-width: 960px){
+					.primary-header .inner{
+						width: 960px;
+						padding-bottom:0%;
+					}	
+				}	
+		.title{
+			height:50px; /*temp*/
+			line-height: 50px;
+			flex:2;
+			color: #d70100;
+		}
+				@media screen and (min-width: 600px){
+					.primary-header .inner{
+						background-color: #333;
+					}	
+				}	
+		.primary-nav{			
+			flex:5;
+			text-align: center;
+			text-decoration: none;
+		}
+		@media screen and (min-width: 600px){
+				.primary-header .inner{
+					height: 50px;
+					line-height: 50px;
+				}	
+			}	
+/************************************************HEADER/
+
+/*Menu*************************************************/
+		.menu-on{
+			/*background-color:#fff;*/
+			color:#999;
+			border: black solid 1px;
+			/*opacity: .6;*/
+			position: fixed;
+			right: 0;
+			top: 40;
+			z-index: 1001;
+			padding: 10px 0px 10px 0px;
+			width: 100px;
+			text-align: center;
+		}
+		.icon{
+			height: 40px;
+			width: 40px;
+
+		}
+		.menu-off{
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0, 0.6);
+			z-index: 1000;
+			display: none;
+		}
+		nav.primary-nav{
+			background-color: #000;
+			position: fixed;
+			right: 0;
+			top: 20;
+			min-width: 200px;
+			z-index: 1002;
+			display: none;
+		}
+		nav.primary-nav a{
+			color: #fff;
+			display: block;
+			padding: 5px 10px;
+		}
+		#toggle-menu{
+			display: none;
+		}
+		#toggle-menu:checked ~ nav.primary-nav{
+			display:block;
+			padding: 10px;
+
+		}
+
+		#toggle-menu:checked ~ nav.primary-nav a{
+			margin-bottom: 50px;
+			color: white;
+			border: #fff	 solid 1px;
+		}
+		#toggle-menu:checked ~ .menu-off {
+			display: block;
+		}
+		@media screen and (min-width: 600px) {
+			.menu-on, .menu-off {
+				display: none;
+			}
+			nav.primary-nav {
+				display: block;
+				position: static;
+			}
+			nav.primary-nav a {
+				display: inline-block;
+			}
+		}
+/**************************************************Menu/
+
+/*MAIN************************************************/	
+
+		.main{
+			background-color: #000;
+			background-size: 100% auto;
+		}
+		.main .inner{
+			background-color: #FFF;
+			margin: 0 auto;
+			padding-bottom:55%;
+			overflow: scroll;
+		}
+		@media screen and (min-width: 960px){
+			.main .inner{
+				width: 960px; /*temp*/
+				height:540px;
+				padding-bottom:0%;
+				overflow: scroll;
+			}	
+		}
+/*************************************************MAIN/	
+/*Table***********************************************/	
+table{
+	margin-top: 5%;
+}
+tr{
+	display: flex;
+}
+td{
+	flex: 1;
+	text-align: center
+	;
+}
+.pageTitle{
+	margin-top: 20%;
+	text-align: center;
+	color: #d70100;
+}
+		@media screen and (min-width: 960px){
+			.pageTitle{
+				margin-top: 0;
+			}
+		}
+.poster{
+	width: 120px;
+	height: auto;
+}
+/************************************************Table/
+/*FOOTER************************************************/	
+		.primary-footer{
+			background-color: #000;
+		}
+		.primary-footer .inner{
+			background-color: #111;
+			background-size: 100% auto;
+			margin: 0 auto;
+			/*border-style: solid;*/
+
+		}
+		@media screen and (min-width: 960px){
+			.primary-footer .inner{
+				width: 960px;
+				padding-bottom:0%;
+			}	
+		}
+		.primary-footer .footer-nav{
+			margin-bottom: 5px;
+			color: #d70100;
+			height: 30px;
+			text-align: center;
+		}
+		.primary-footer .footer-nav a{
+			font-size: .7em;
+			font-weight: 100;
+			margin: 20px;
+			line-height: 30px;
+			color: #d70100;
+		}
+		.iconSection{
+			margin: 0 auto;
+			max-width: 500px;
+			/*background-color: lime;*/
+			text-align: center;
+			display: flex
+		}
+		.iconContainer{
+			/*background-color: yellow;*/
+			flex: 1;
+			font-size: 11px;
+			color: #fff;
+		}
+		.footerContent{
+			display: block;
+			border-top: #d70100 solid 2px;
+			border-bottom: #d70100 solid 2px;
+
+		}
+		@media screen and (min-width: 600px){
+			.footerContent{
+				display: flex;
+			}	
+		}
+		.footerContent h5{
+			color: #fff;
+			text-align: center;
+			padding-bottom: 10px;
+			font-weight: 200;
+		}
+		.contact{
+
+		}
+		.contact .form{
+	
+		}
+		.media{
+			margin-top: 50px;
+		}
+		.footerInfo{
+			flex: 1;
+			margin: 30px;
+		}
+
+		.footerContent h5{
+			color: #fff;
+			text-align: center;
+			padding-bottom: 10px;
+			font-weight: 200;
+		}
+		.map{
+			flex: 1;
+			margin: 20px;
+		}
+		.copyright{
+		}
+		.address{
+			font-size: .8em;
+			color: #fff;
+		}
+		textarea{
+			margin-top: 4px;
+		}
+
+/*************************************************FOOTER/	
+
+	</style>
+</head>
+<body>
+	<header class="primary-header">
+		<div class="inner">
+			<div class="headerLogo">
+				<!-- <img src="https://pbs.twimg.com/profile_images/1598037847/Creative-Circle-Logo.png" alt=""> -->
+				<img src="images/logo.png" alt="">
+			</div>
+			<div class="headerContent">
+				<div class="title"><h2>Abunai MMA</h2></div>
+
+				<input id="toggle-menu" type="checkbox" />
+				<label for="toggle-menu" class="menu-on"><img class="icon" src="icons/menuIcon.png" alt=""></label>
+				<label for="toggle-menu" class="menu-off"></label>
+				
+				<nav class="primary-nav">
+					<a href="index.html">Home</a>
+					<a href="members.html">Members</a>
+					<a href="aboutus.html">About Us</a>
+					<a href="contactus.html">Contact Us</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+
+	<div class="main">
+		<div class="inner">
+
+				<table style="width:100%">
+					<tr>
+						<td>
+							<h3>COMPETITIONS</h3>	
+						</td>		
+						<td>
+							<h3>DATE</h3>	
+						</td>		
+						<td>
+							<h3>TIMES</h3>	
+						</td>		
+						<td>
+							<h3>ADDRESS</h3>	
+						</td>
+					</tr>
+					
+					<tr>
+						<td><img class="poster" src="posters/poster01.png" alt=""></td>
+						<td>September 26, 12016</td>
+						<td>10:00pm - 5:00pm</td>
+						<td>1234 Main st. Phoenix, AZ 56789</td>
+					</tr>			
+					<tr>
+						<td><img class="poster" src="posters/poster02.jpg" alt=""></td>
+						<td>September 26, 12016</td>
+						<td>10:00pm - 5:00pm</td>
+						<td>1234 Main st. Phoenix, AZ 56789</td>
+					</tr>			
+					<tr>
+						<td><img class="poster" src="posters/poster03.jpg" alt=""></td>
+						<td>September 26, 12016</td>
+						<td>10:00pm - 5:00pm</td>
+						<td>1234 Main st. Phoenix, AZ 56789</td>
+					</tr>			
+					<tr>
+						<td><img class="poster" src="posters/poster01.png" alt=""></td>
+						<td>September 26, 12016</td>
+						<td>10:00pm - 5:00pm</td>
+						<td>1234 Main st. Phoenix, AZ 56789</td>
+					</tr>			
+					<tr>
+						<td><img class="poster" src="posters/poster02.jpg" alt=""></td>
+						<td>September 26, 12016</td>
+						<td>10:00pm - 5:00pm</td>
+						<td>1234 Main st. Phoenix, AZ 56789</td>
+					</tr>			
+					<tr>
+						<td><img class="poster" src="posters/poster03.jpg" alt=""></td>
+						<td>September 26, 12016</td>
+						<td>10:00pm - 5:00pm</td>
+						<td>1234 Main st. Phoenix, AZ 56789</td>
+					</tr>
+
+				</table>
+
+		</div>
+	</div> 
+	<footer class="primary-footer">
+		<div class="inner">
+			<div class="footerContent">
+				<div class="footerInfo">
+					<div class="contact">
+						<form>
+							<h5>CONTACT US</h5>
+						 	<input type="text" name="firstname" size="30" placeholder="Name">
+						 	<input type="text" name="lastname"  size="30" placeholder="Email"><br>
+						 	<textarea rows="4" cols="61" name="comment" form="usrform" placeholder="Questions, Comments or Concerns"></textarea>
+						</form>
+						<button type="submit" form="form1" value="Submit">Submit</button>
+					</div>
+					<div class="media">
+						<h5>FOLLOW US</h5>
+						<div class="iconSection">
+							<div class="iconContainer">
+								<img src="icons/icon-facebook.png" alt="">
+								<div class="iconTitle">
+									Facebook	
+								</div>
+							</div>	
+							<div class="iconContainer">
+								<img src="icons/icon-youtube.png" alt="">
+								<div class="iconTitle">
+									YouTube	
+								</div>
+							</div>	
+							<div class="iconContainer">
+								<img src="icons/icon-twitter.png" alt="">
+								<div class="iconTitle">
+									Twitter	
+								</div>
+							</div>	
+							<div class="iconContainer">
+								<img src="icons/icon-instagram.png" alt="">
+								<div class="iconTitle">
+									Instagram	
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="map">
+					<p class="address">1060 N Eliseo Felix Jr Way Avondale, AZ 85323</p>
+					<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:300px;width:auto;'><div id='gmap_canvas' style='height:300px;width:auto'></div><div><small><a href="http://www.embedgooglemaps.com/en/">Generate your map here, quick and easy!									Give your customers directions									Get found</a></small></div><div><small><a href="https://top10geeks.com/top-10-best-basketball-shoes-2016/">Top 10 basketball shoes</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(33.4437395,-112.33733480000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(33.4437395,-112.33733480000001)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>1060 N Eliseo Felix Jr Way<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+				</div>
+			</div>
+			
+		</div>
+		<div class="inner">
+			<p>© Copyright 2016, Abunai MMA</p>
+		</div>
+	</footer>
+
+
+</body>
+</html>
