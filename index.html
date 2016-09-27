@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
 	<style>
 /*BODY*************************************************/
 		body{
-			background-color: black;
+			background-color: #000;
 			font-family: helvetica ;
 		}
 		h1,h2,h3,h4,h5,h6{
@@ -27,12 +28,10 @@
 				@media screen and (min-width: 600px){
 					.primary-header{
 						height:50px;
-						/*display: block;*/
 						position: static;
 					}	
 				}
 		.primary-header .inner{
-			/*background-color: #777;*/
 			margin: 0 auto;
 			display: flex;
 		}
@@ -57,7 +56,7 @@
 			height:50px; /*temp*/
 			line-height: 50px;
 			flex:2;
-			color: red; /*temp*/
+			color: #d70100;
 		}
 				@media screen and (min-width: 600px){
 					.primary-header .inner{
@@ -66,7 +65,6 @@
 				}	
 		.primary-nav{			
 			flex:5;
-			/*background-color: #555;*/
 			text-align: center;
 			text-decoration: none;
 		}
@@ -80,10 +78,10 @@
 
 /*Menu*************************************************/
 		.menu-on{
-			background-color:#ff0000;
+			/*background-color:#fff;*/
 			color:#999;
-			border: white solid 2px;
-			opacity: .6;
+			border: black solid 1px;
+			/*opacity: .6;*/
 			position: fixed;
 			right: 0;
 			top: 40;
@@ -95,6 +93,7 @@
 		.icon{
 			height: 40px;
 			width: 40px;
+
 		}
 		.menu-off{
 			position: fixed;
@@ -132,7 +131,7 @@
 		#toggle-menu:checked ~ nav.primary-nav a{
 			margin-bottom: 50px;
 			color: white;
-			border: white solid 1px;
+			border: #fff	 solid 1px;
 		}
 		#toggle-menu:checked ~ .menu-off {
 			display: block;
@@ -153,10 +152,10 @@
 
 /*Message**********************************************/
 		.message-on {
-			background-color:#ff0000;
-			opacity: .6;
+			background-color:#fff;
+			opacity: .4;
 			color: #fff;
-			border: white solid 2px;
+			border: black solid 1px;
 			position: fixed;
   			right: 0;
   			top:40;
@@ -164,8 +163,8 @@
   			padding: 80px 0px 10px 0px;
   			width: 100px;
   			text-align: center;
-		}
-		aside.messageBoard{
+	  		}
+		aside.messageBoard{	
   			position: fixed;
   			right: 0;
   			top: 0;
@@ -210,6 +209,8 @@
 		#toggle-messageBoard:checked ~ .message-off {
 			display: block;
 			z-index: 2006;
+			background-color: rgba(0,0,0, .9);
+			color: #fff;
 		}
 		@media screen and (min-width: 600px){
 			.message-on, .message-off { 
@@ -225,7 +226,7 @@
 			}
 		}
 		.messages{
-			margin-top: 80px;
+			margin-top: 20%;
 			margin-left: 20px;
 			margin-right: 20px;
 			font-size:  1em;
@@ -286,9 +287,9 @@
 			position: absolute;
 			width: 62%;
 			max-width: 680px;
-			margin-left: 8%;
+			margin-left: 14%;
 		}
-		@media screen and (min-width: 600px){
+		@media screen and (min-width: 1100px){
 			.figure{
 				margin-left: 7%;
 			}
@@ -390,7 +391,7 @@
 /*EXTRA************************************************/	
 
 		.extra{
-			background-color: red;
+			background-color: #d70100;
 		}
 		.extra .inner{
 			background-color: hotpink;
@@ -425,7 +426,7 @@
 		}
 		.primary-footer .footer-nav{
 			margin-bottom: 5px;
-			color: red;
+			color: #d70100;
 			height: 30px;
 			text-align: center;
 		}
@@ -434,7 +435,7 @@
 			font-weight: 100;
 			margin: 20px;
 			line-height: 30px;
-			color: #ff0000	;
+			color: #d70100;
 		}
 		.iconSection{
 			margin: 0 auto;
@@ -451,8 +452,8 @@
 		}
 		.footerContent{
 			display: block;
-			border-top: #ff0000 solid 2px;
-			border-bottom: #ff0000 solid 2px;
+			border-top: #d70100 solid 2px;
+			border-bottom: #d70100 solid 2px;
 
 		}
 		@media screen and (min-width: 600px){
@@ -528,7 +529,7 @@
 	</header>
 	<div class="hero">
 		<div class="inner">
-			<img class="figure" src="mmaGirlCroppedMod.png" alt="">
+			<img class="figure" src="mmaGirlCroppedMod2.png" alt="">
 			<input id="toggle-messageBoard" type="checkbox" />
 			<label for="toggle-messageBoard" class="message-on"><img class="icon" src="messageIcon.png" alt=""></label>
 			<label for="toggle-messageBoard" class="message-off"></label>
@@ -603,7 +604,7 @@
 			
 		</div>	
 		</div>
-<!-- 	<div class="extra">
+		<!--<div class="extra">
 		<div class="inner">section3</div>
 	</div> -->
 	<footer class="primary-footer">
@@ -613,9 +614,9 @@
 					<div class="contact">
 						<form>
 							<h5>CONTACT US</h5>
-						 	<input type="text" name="firstname" placeholder="Name">
-						 	<input type="text" name="lastname" placeholder="Email"><br>
-						 	<textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Questions, Comments or Concerns"></textarea>
+						 	<input type="text" name="firstname" size="30" placeholder="Name">
+						 	<input type="text" name="lastname"  size="30" placeholder="Email"><br>
+						 	<textarea rows="4" cols="61" name="comment" form="usrform" placeholder="Questions, Comments or Concerns"></textarea>
 						</form>
 						<button type="submit" form="form1" value="Submit">Submit</button>
 					</div>
